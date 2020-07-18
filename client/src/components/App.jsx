@@ -1,8 +1,8 @@
-import axios from 'axios'
+import axios from 'axios';
 import React from 'react';
-import { BrowserRouter, Route, Switch, NavLink } from 'react-router-dom'
+import { BrowserRouter, Route, Switch, NavLink } from 'react-router-dom';
 
-import Home from './Home.jsx'
+import Home from './Home.jsx';
 
 export default class App extends React.Component {
     constructor(props) {
@@ -12,6 +12,7 @@ export default class App extends React.Component {
     }
 
     componentDidMount() {
+        console.log("anything")
         let coordinates;
         navigator.geolocation.getCurrentPosition(position => {
             coordinates =
