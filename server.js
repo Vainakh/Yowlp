@@ -2,6 +2,21 @@ const bodyParser = require("body-parser");
 const express = require('express');
 const nearbyCities = require("nearby-cities")
 const path = require('path');
+const { Client } = require('pg');
+const connectionString = 'postgresql://postgres:password@127.0.0.1:5432/yowlp'
+
+const client = new Client({
+    connectionString: connectionString,
+})
+
+client.connect(err => {
+    if (err) {
+        console.error('connection error', err.stack)
+    } else {
+        console.log('connected')
+    }
+})
+
 
 const app = express();
 
