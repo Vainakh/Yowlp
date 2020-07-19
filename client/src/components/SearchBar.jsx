@@ -1,6 +1,9 @@
 import React from 'react';
 import axios from "axios";
 
+import { Link } from 'react-router-dom';
+import Review from "./Review.jsx";
+
 export default class SearchBar extends React.Component {
     constructor(props) {
         super(props);
@@ -8,13 +11,17 @@ export default class SearchBar extends React.Component {
             location: "",
             find: "",
             dropdown: [],
-            showDropdown: false
+            showDropdown: false,
+            navigate: false,
+            id: ""
         };
 
         this.handleChange = this.handleChange.bind(this);
         this.handleChangeFind = this.handleChangeFind.bind(this);
         this.handleBlur = this.handleBlur.bind(this);
         this.handleFocus = this.handleFocus.bind(this);
+        this.navigateTo = this.navigateTo.bind(this);
+        this.timer;
     }
 
     componentDidMount() {
@@ -33,8 +40,11 @@ export default class SearchBar extends React.Component {
         })
     }
 
+    componentWillUnmount() {
+        clearTimeout(this.timer);
+    };
+
     handleChange(event) {
-        console.log('handleChange');
         this.setState({
             location: event.target.value
         });
@@ -53,15 +63,24 @@ export default class SearchBar extends React.Component {
     }
 
     handleBlur() {
-        this.setState({
-            showDropdown: false
-        });
+        this.timer = setTimeout(() => {
+            this.setState({
+                showDropdown: false
+            });
+        }, 100);
     }
 
     handleFocus() {
         this.setState({
             showDropdown: true
         });
+    }
+
+    navigateTo(index) {
+        console.log('navigateTo');
+        // this.setState({
+        //     id: this.state.dropdown[index].id
+        // });
     }
 
     render(){
@@ -72,7 +91,16 @@ export default class SearchBar extends React.Component {
                 <div className="searchbar-find-dropdown">
                     {this.state.dropdown.map((name, index) => {
                         return (
-                            <div className="dropdown-result" key={index}> {name.restaurant_name}</div>
+                            <Link key={index} to={{
+                                pathname: '/review',
+                                state: {
+                                    id: this.state.dropdown[index].id
+                                }
+                            }}>
+                                <div className="dropdown-result" onClick={() => {this.navigateTo(index)}}>
+                                    {name.restaurant_name}
+                                </div>
+                            </Link>
                         )
                     })}
                 </div>
@@ -104,6 +132,7 @@ export default class SearchBar extends React.Component {
                     </div>
                 </form>
                 {dropdown}
+
             </div>
         )
     }

@@ -1,6 +1,5 @@
 import axios from 'axios';
 import React from 'react';
-import { BrowserRouter, Route, Switch, NavLink } from 'react-router-dom';
 
 export default class Review extends React.Component {
     constructor(props) {
@@ -12,7 +11,7 @@ export default class Review extends React.Component {
     }
 
     componentWillMount() {
-        let id = 1;
+        const { id } = this.props.location.state
 
         axios.get('/review/' + id).then(response => {
             this.setState({

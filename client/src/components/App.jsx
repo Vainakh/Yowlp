@@ -1,38 +1,38 @@
 import axios from 'axios';
 import React from 'react';
-import { BrowserRouter, Route, Switch, NavLink } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, NavLink, HashRouter } from 'react-router-dom';
 
 import Home from './Home.jsx';
 import Main from './Main.jsx';
+import Review from './Review';
 import Footer from './Footer.jsx';
+
+const Layout = ({children}) => {
+    return (
+        <div>
+            <main>{children}</main>
+        </div>
+    );
+};
 
 export default class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            id: ''
         };
-    }
-
-    componentDidMount() {
-        // let coordinates;
-        // navigator.geolocation.getCurrentPosition(position => {
-        //     coordinates =
-        //         {
-        //             latitude: position.coords.latitude,
-        //             longitude: position.coords.longitude
-        //         };
-        //     axios.post('/nearbyCity', coordinates).then(response => {
-        //         console.log(response.data.name);
-        //     })
-        // })
     }
 
     render(){
         return(
-            <div>
-                {/*<Home />*/}
-                <Main />
-            </div>
+            <HashRouter>
+                <Layout>
+                    <Switch>
+                        <Route exact path='/' component={Main}/>
+                        <Route exact path={`/review`} component={Review}/>
+                    </Switch>
+                </Layout>
+            </HashRouter>
         )
     }
 }

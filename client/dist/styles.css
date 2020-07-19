@@ -25,6 +25,10 @@ input:focus, textarea:focus, select:focus{
     outline: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 .footer-container {
     position: fixed;
     bottom: 0;
@@ -188,6 +192,7 @@ input:focus, textarea:focus, select:focus{
 .dropdown-result {
     cursor: pointer;
     padding: 15px;
+    color: black;
 }
 
 .dropdown-result:hover {
