@@ -21,12 +21,16 @@ input {
     border-left-style: hidden;
 }
 
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
 .footer-container {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(244, 244, 244);
     height: 530px;
     width: auto;
     border-top: 1px solid rgb(204, 204, 204);
@@ -63,16 +67,12 @@ input {
     top: 0;
     left: 0;
     right: 0;
-    height: 600px;
+    height: 700px;
     background-color: black;
 }
 
 .searchbar-left {
     border-radius: 5px 0px 0px 5px;
-}
-
-.search-icon-container {
-    /*background-color: rgb(211, 35, 35);*/
 }
 
 .searchbar-container {
@@ -142,4 +142,56 @@ input {
 
 .review-image {
     margin: 5px 0;
+}
+
+.restaurant-category {
+    font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+    text-decoration: none;
+    color: rgb(117, 114, 128);
+}
+
+.phone-container {
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 24px;
+}
+
+.review-phone-text {
+    font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #2b273c;
+}
+
+.contacts-container {
+    height: 20px;
+    width: 331px;
+    border-radius: 4px;
+    margin-top: 25px;
+    padding: 24px;
+    border: 1px solid rgb(238, 238, 239);
+}
+
+.image-phone {
+    margin-right: 15px;
+}
+
+.searchbar-find-dropdown {
+    position: fixed;
+    background-color: white;
+    width: 540px;
+    border-radius: 0 0 4px 4px;
+}
+
+.dropdown-result {
+    cursor: pointer;
+    padding: 15px;
+}
+
+.dropdown-result:hover {
+    font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+    color: white;
+    background-color: blue;
 }
