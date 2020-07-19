@@ -110,3 +110,36 @@ input {
     display: flex;
     flex-direction: row;
 }
+
+.review-picture-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.review-picture {
+    width: 100%;
+    max-width: 40vh;
+    height: auto;
+}
+
+.restaurant-title {
+    font-family: Poppins,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 54px;
+}
+
+.review-main-container {
+    display: flex;
+    justify-content: center;
+}
+
+.review-container {
+    width: 760px;
+}
+
+.review-image {
+    margin: 5px 0;
+}

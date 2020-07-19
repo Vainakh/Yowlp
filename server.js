@@ -28,6 +28,18 @@ app.post('/nearbyCity', (req, res) => {
     res.send(nearbyCities(req.body)[0]);
 })
 
+app.get('/review/:id', (request, response) => {
+
+    client.query(`SELECT * FROM review.restaurant WHERE ID = ${request.params.id}`, (err, res) => {
+
+        if (err) {
+            console.log(err.stack);
+        } else {
+            response.send(res.rows[0]);
+        }
+    })
+});
+
 const port = Number(process.env.PORT || 4000);
 
 app.listen(port, function () {
