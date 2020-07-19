@@ -12,6 +12,10 @@ export default class Main extends React.Component {
     render(){
         return(
             <div className="main-container">
+                <div className="logo-container">
+                    <span className="main-title" >Yowlp</span>
+                    <img className="main-logo" src="./images/logo.svg" />
+                </div>
                 <SearchBar />
             </div>
         )

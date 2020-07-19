@@ -60,6 +60,9 @@ input {
 }
 
 .main-container {
+    top: 0;
+    left: 0;
+    right: 0;
     height: 600px;
     background-color: black;
 }
@@ -84,4 +87,26 @@ input {
     height: 30px;
     width: 30px;
     border-radius: 0 5px 5px 0;
+}
+
+.main-logo {
+    height: 80px;
+}
+
+.main-title {
+    font-family: 'Fredoka One', cursive;
+    font-size: 60px;
+    color: white;
+}
+
+.main-container {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: row;
 }
