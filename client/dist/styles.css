@@ -1,0 +1,87 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+input {
+    border-left-style: hidden;
+}
+
+.footer-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(245, 245, 245);
+    height: 530px;
+    width: auto;
+    border-top: 1px solid rgb(204, 204, 204);
+}
+
+.searchbar-find{
+    width: 480px;
+    height: 45px;
+}
+
+.searchbar-near{
+    width: 480px;
+    height: 45px;
+}
+
+::placeholder {
+    font-weight: bold;
+    font-size: 15px;
+    font-family: "Roboto Light", serif;
+}
+
+.input-bar-label {
+    padding-right: 12px;
+    padding-left: 12px;
+    border-top: 2px solid black;
+    padding-top: 14px;
+    font-weight: bold;
+    background-color: white;
+    color: #666;
+    border-bottom: 2px solid rgb(118, 118, 118);;
+}
+
+.main-container {
+    height: 600px;
+    background-color: black;
+}
+
+.searchbar-left {
+    border-radius: 5px 0px 0px 5px;
+}
+
+.search-icon-container {
+    /*background-color: rgb(211, 35, 35);*/
+}
+
+.searchbar-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.searchbar-icon {
+    margin-top: 2px;
+    background-color: rgb(211, 35, 35);
+    padding: 9px;
+    height: 30px;
+    width: 30px;
+    border-radius: 0 5px 5px 0;
+}

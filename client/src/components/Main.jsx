@@ -1,6 +1,8 @@
 import React from 'react';
 
-export default class Footer extends React.Component {
+import SearchBar from './SearchBar.jsx'
+
+export default class Main extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -9,8 +11,8 @@ export default class Footer extends React.Component {
 
     render(){
         return(
-            <div className="footer-container">
-                <p>Footer</p>
+            <div className="main-container">
+                <SearchBar />
             </div>
         )
     }
