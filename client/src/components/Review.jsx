@@ -28,7 +28,7 @@ export default class Review extends React.Component {
                     {this.state.pictures.map((picture, index) => {
                         console.log(picture);
                         return (
-                            <img className="review-picture" src={picture} />
+                            <img key={index} className="review-picture" src={picture} />
                         )
                     })}
                 </div>

@@ -7,13 +7,13 @@ import Main from './Main.jsx';
 import Review from './Review';
 import Footer from './Footer.jsx';
 
-const Layout = ({children}) => {
-    return (
-        <div>
-            <main>{children}</main>
-        </div>
-    );
-};
+// const Layout = ({children}) => {
+//     return (
+//         <div>
+//             <main>{children}</main>
+//         </div>
+//     );
+// };
 
 export default class App extends React.Component {
     constructor(props) {
@@ -25,14 +25,12 @@ export default class App extends React.Component {
 
     render(){
         return(
-            <HashRouter>
-                <Layout>
-                    <Switch>
-                        <Route exact path='/' component={Main}/>
-                        <Route exact path={`/review`} component={Review}/>
-                    </Switch>
-                </Layout>
-            </HashRouter>
+            <BrowserRouter>
+                <Switch>
+                    <Route exact path='/' component={Main}/>
+                    <Route exact path={`/review`} component={Review}/>
+                </Switch>
+            </BrowserRouter>
         )
     }
 }
