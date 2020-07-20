@@ -200,3 +200,14 @@ a {
     color: white;
     background-color: blue;
 }
+
+.ronalds-rating-container {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+.ronalds-rating-text {
+    padding-top: 4px;
+    margin-right: 3px;
+}

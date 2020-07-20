@@ -37,6 +37,11 @@ export default class Review extends React.Component {
                         <div className="restaurant-title">{this.state.data.restaurant_name}</div>
                         <img className="review-image" src={`./images/${this.state.data.rating}.png`} />
                         <div className="restaurant-category">{this.state.data.category}</div>
+                        <div className="ronalds-rating-container">
+                            <div className="ronalds-rating-text">Seat Comfort Rating By Alex Ronalds </div>
+                            <img src={`./images/${this.state.data.ronalds_rating}a.svg`} />
+                        </div>
+
                     </div>
                     <div className="contacts-container">
                         <div className="phone-container">
