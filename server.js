@@ -1,13 +1,24 @@
+process.env.NODE_TLS_REJECT_UNAUTHORIZED='0';
+const pg = require('pg');
 const bodyParser = require("body-parser");
 const express = require('express');
 const nearbyCities = require("nearby-cities")
 const path = require('path');
-const { Client } = require('pg');
+// const { Client } = require('pg');
 const connectionString = 'postgresql://postgres:password@127.0.0.1:5432/yowlp'
 
-const client = new Client({
-    connectionString: connectionString,
-})
+// const client = new Client({
+//     connectionString: connectionString,
+// })
+
+var client = new pg.Client({
+    user: "ygxcaytdyjreia",
+    password: "147b031debaa3d6a179f90f439529bdeffe05eb3997f203b39cab285916142a1",
+    database: "d8prlgjqpncmr",
+    port: 5432,
+    host: "ec2-18-233-137-77.compute-1.amazonaws.com",
+    ssl: true
+}); 
 
 client.connect(err => {
     if (err) {
