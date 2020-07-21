@@ -211,3 +211,27 @@ a {
     padding-top: 4px;
     margin-right: 3px;
 }
+
+.covid-update {
+    font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 26px;
+    margin: 20px 0;
+}
+
+.covid-update-img {
+    height: 350px;
+    width: auto;
+}
+
+.consider-img {
+    height: 350px;
+    width: auto;
+    margin-top: 50px;
+}
+
+.amenities-img {
+    height: 775px;
+    width: auto;
+}

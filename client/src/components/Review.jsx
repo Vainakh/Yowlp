@@ -41,6 +41,13 @@ export default class Review extends React.Component {
                             <div className="ronalds-rating-text">Seat Comfort Rating By Alex Ronalds </div>
                             <img src={`./images/${this.state.data.ronalds_rating}a.svg`} />
                         </div>
+                        <div >
+                            <div className="covid-update">COVID-19 Updates</div>
+                            <img className="covid-update-img" src="./images/covidupdate.png" alt=""/>
+                        </div>
+                        <div>
+                            <img className="amenities-img" src="./images/amenities.png" alt=""/>
+                        </div>
 
                     </div>
                     <div className="contacts-container">
@@ -48,6 +55,10 @@ export default class Review extends React.Component {
                             <img className="image-phone" src='./images/phone.svg' />
                             <div className="review-phone-text">{this.state.data.phone_number}</div>
                         </div>
+                        <div>
+                            <img className="consider-img" src="./images/consider.png" alt=""/>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
