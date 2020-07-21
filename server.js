@@ -63,7 +63,7 @@ app.post('/find', (request, response) => {
 })
 
 app.get('/review', (request, response) => {
-    response.redirect('https://yowlp.herokuapp.com/');
+    response.redirect('http://localhost:4000/');
 })
 
 const port = Number(process.env.PORT || 4000);
